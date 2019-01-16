@@ -47,6 +47,8 @@ import {
   MatTooltipModule,
   MatTreeModule,
 } from '@angular/material';
+import { Service } from './services/service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -56,6 +58,7 @@ import {
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     AppRoutingModule,
     MatAutocompleteModule,
     MatBadgeModule,
@@ -93,7 +96,7 @@ import {
     MatTooltipModule,
     MatTreeModule,
   ],
-  providers: [],
+  providers: [Service],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

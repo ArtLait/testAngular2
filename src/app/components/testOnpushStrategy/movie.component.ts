@@ -1,6 +1,7 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ChangeDetectorRef } from '@angular/core';
 import { ChangeDetectionStrategy } from '@angular/core';
 import { Actor } from './actor.model';
+import { Service } from './../../services/service';
 
 @Component({
   selector: 'app-movie',
@@ -23,7 +24,8 @@ export class MovieComponent {
   user: any = {
     name: 'Artem'
   };
-  changeUserName() {
+
+  changeUserName(service: Service) {
     this.user.name = 'Vanya';
   }
 }

@@ -10,4 +10,4 @@ const routing = [{
     imports: [RouterModule.forChild(routing)],
     exports: [RouterModule]
 })
-export class FootballRoutingModule {}
+export class FactoryResolverRoutingModule {}

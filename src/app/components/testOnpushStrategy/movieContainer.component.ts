@@ -6,6 +6,7 @@ import { Actor } from './actor.model';
   template: `
     <h1>MovieApp</h1>
     <p>{{ slogan }}</p>
+    <div *ngIf="true">NgIf is work!</div>
     <button type="button" (click)="changeActorProperties()">
       Change Actor Properties
     </button>

@@ -5,7 +5,7 @@ import { TestMaterialComponent } from './components/testAngularMaterial/test-ang
 const pathToComponents = 'src/app/components/';
 const routes: Routes = [
   {
-    path: 'onpush',
+    path: 'onpush/:id',
     loadChildren: pathToComponents + 'testOnpushStrategy/movie.module#MovieModule'
   },
   {
@@ -13,10 +13,14 @@ const routes: Routes = [
     loadChildren: pathToComponents + 'testFactoryResolver/factory-resolver.module#FactoryResolverModule'
   },
   {
+    path: 'injection',
+    loadChildren: pathToComponents + 'testInjection/testInjection.module#TestInjectionModule'
+  },
+  {
     path: 'material',
     component: TestMaterialComponent
   },
-  {path: '**', redirectTo: ''},
+  {path: '**', redirectTo: ''}
 ];
 @NgModule({
   imports: [ RouterModule.forRoot(routes) ],
